@@ -56,7 +56,7 @@
                 <label for="exampleInputDescripcion" class="form-label">Descripción</label>
                 <input style="color:black" type="text" formControlName="descripcion" class="form-control"
                     id="exampleInputDescripcion" [ngClass]="{'is-invalid': Descripcion?.errors && Descripcion?.touched}"
-                    placeholder="Ingrese una breve descripcion" required>
+                    placeholder="Ingrese una breve descripción" required>
                 <div *ngIf="Descripcion?.errors && Descripcion?.touched">
                     <p *ngIf="Descripcion?.hasError('required')" class="text-danger">
                         No puede dejar la descripción en blanco.
