@@ -1,5 +1,7 @@
-<div id="galaxy" *ngFor="let form of formList">
-    <img id="banner-imagen" [src]="form.url_portada" alt="Banner">
+<div id="galaxy">
+    <div *ngFor="let form of formList">
+        <img id="banner-imagen" [src]="form.url_portada" alt="Banner">
+    </div>
     <div id="bienvenida">
         <div #title class="title">
             <p fs-1 id="welcome" class="letter text-3d" *ngFor="let letter of letters">{{letter}}</p>
@@ -11,7 +13,7 @@
             <img id="logo" src="\assets\arg-programa.png" alt="Argentina Programa">
         </a>
     </div>
-    <div class="position-absolute top-0 end-0">
+    <div *ngFor="let form of formList" class="position-absolute top-0 end-0">
         <a target="_blank" [href]="form.url_github">
             <img id="github" src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894__480.png"
                 alt="GitHub Icon">
