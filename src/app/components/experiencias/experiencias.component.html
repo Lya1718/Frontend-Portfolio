@@ -2,7 +2,7 @@
     <div class="col-6 text-center">
         <div style="color:white">
             <div>
-                <h2 class="texto fs-1 fw-bold mt-5">Experiencia Laboral</h2>
+                <h2 class="texto fs-1 fw-bold mt-5">* Experiencia Laboral *</h2>
                 <br>
                 <a *ngIf="login" class="botones" routerLink="/experiences-add"><img class="agregar"
                         src="\assets\sumablanca.jpg" alt="agregar"></a>
@@ -12,8 +12,8 @@
         <div *ngFor="let form of formList">
             <div class="m-5 d-flex justify-content-center align-items-center" style="color:white">
                 <ul class="fs-3">
-                    <p class="fw-bold">{{form.empresa}} - {{form.fecha_inicio}}-{{form.fecha_fin}}</p>
-                    <li>{{form.cargo}} - {{form.descripcion}}</li>
+                    <p class="fw-bold">{{form.descripcion}} "{{form.empresa}}"</p>
+                    <li>{{form.cargo}} - {{form.fecha_inicio}} - {{form.fecha_fin}}</li>
                 </ul>
             </div>
             <div *ngIf="login" class="mt-5" style="color:white">

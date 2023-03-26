@@ -46,7 +46,8 @@
             <div class="mb-3">
                 <label for="exampleInputLink" class="form-label">URL Página</label>
                 <input style="color:black" type="text" formControlName="link" class="form-control" id="exampleInputLink"
-                    [ngClass]="{'is-invalid': Link?.errors && Link?.touched}">
+                    [ngClass]="{'is-invalid': Link?.errors && Link?.touched}"
+                    placeholder="Ingrese el URL de su proyecto">
                 <div *ngIf="Link?.errors && Link?.touched">
                     <p *ngIf="Link?.hasError('required')" class="text-danger">
                         No puede dejar la URL de la página en blanco.

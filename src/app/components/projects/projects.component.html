@@ -1,6 +1,6 @@
 <div class="row justify-content-center">
   <div class="col-6 text-center">
-    <h3 class="texto mt-5 fs-1 fw-bold d-flex justify-content-center">Proyectos</h3>
+    <h3 class="texto mt-5 fs-1 fw-bold d-flex justify-content-center">* Proyectos *</h3>
     <br>
     <a *ngIf="login" class="botones" routerLink="/projects-add"><img class="agregar" src="\assets\sumablanca.jpg"
         alt="agregar"></a>
@@ -16,7 +16,7 @@
       <div class="card-body">
         <p class="card-title">{{form.titulo}}</p>
         <p class="card-text">{{form.descripcion}}</p>
-        <a [href]="form.link"><p class="card-text">Visitar</p></a>
+        <a target="_blank" [href]="form.link"><p class="card-text">Visitar</p></a>
         <br>
         <div *ngIf="login">
           <a class="botones" (click)="editForm(form.id, form.titulo, form.descripcion, form.image, form.link)"

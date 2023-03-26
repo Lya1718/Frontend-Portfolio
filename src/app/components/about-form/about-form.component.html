@@ -38,23 +38,23 @@
             </div>
             <!-- PERFIL -->
             <div class="mb-3">
-                <label for="exampleInputPerfil" class="form-label">URL Perfil</label>
+                <label for="exampleInputPerfil" class="form-label">Perfil (URL)</label>
                 <input style="color:black" type="text" formControlName="url_perfil" class="form-control" id="exampleInputPerfil"
                     [ngClass]="{'is-invalid': UrlPerfil?.errors && UrlPerfil?.touched}">
                 <div *ngIf="UrlPerfil?.errors && UrlPerfil?.touched">
                     <p *ngIf="UrlPerfil?.hasError('required')" class="text-danger">
-                        No puede dejar la URL en blanco.
+                        No puede dejar la foto de perfil en blanco.
                     </p>
                 </div>
             </div>
             <!-- PORTADA -->
             <div class="mb-3">
-                <label for="exampleInputPortada" class="form-label">URL Portada (min 1920x1200)</label>
+                <label for="exampleInputPortada" class="form-label">Portada (URL - min 1920x1200)</label>
                 <input style="color:black" type="text" formControlName="url_portada" class="form-control" id="exampleInputPortada"
                     [ngClass]="{'is-invalid': UrlPortada?.errors && UrlPortada?.touched}">
                 <div *ngIf="UrlPortada?.errors && UrlPortada?.touched">
                     <p *ngIf="UrlPortada?.hasError('required')" class="text-danger">
-                        No puede dejar la URL en blanco.
+                        No puede dejar la imagen de portada en blanco.
                     </p>
                 </div>
             </div>
@@ -74,12 +74,12 @@
             </div>
             <!-- GITHUB -->
             <div class="mb-3">
-                <label for="exampleInputGithub" class="form-label">Github</label>
+                <label for="exampleInputGithub" class="form-label">Github (URL)</label>
                 <input style="color:black" type="text" formControlName="url_github" class="form-control" id="exampleInputGithub"
                     [ngClass]="{'is-invalid': UrlGithub?.errors && UrlGithub?.touched}">
                 <div *ngIf="UrlGithub?.errors && UrlGithub?.touched">
                     <p *ngIf="UrlGithub?.hasError('required')" class="text-danger">
-                        No puede dejar la cuenta Github en blanco.
+                        No puede dejar la cuenta de Github en blanco.
                     </p>
                 </div>
             </div>

@@ -30,6 +30,7 @@ export class ProjectsComponent implements OnInit {
     this.servicio.editingTitulo = titulo;
     this.servicio.editingDescripcion = descripcion;
     this.servicio.editingImage = image;
+    this.servicio.editingLink = link;
   }
 
   //GET

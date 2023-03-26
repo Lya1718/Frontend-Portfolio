@@ -32,7 +32,7 @@
                 <label for="exampleInputFechaInicio" class="form-label">Fecha de inicio</label>
                 <input style="color:black" type="text" formControlName="fecha_inicio" class="form-control"
                     id="exampleInputFechaInicio" [ngClass]="{'is-invalid': Fecha_Inicio?.errors && Fecha_Inicio?.touched}"
-                    placeholder="Ingrese la fecha de inicio" required>
+                    placeholder="Por Ej. 10/Jun/2023" required>
                 <div *ngIf="Fecha_Inicio?.errors && Fecha_Inicio?.touched">
                     <p *ngIf="Fecha_Inicio?.hasError('required')" class="text-danger">
                         No puede dejar la fecha de inicio en blanco.
@@ -44,7 +44,7 @@
                 <label for="exampleInputFechaFin" class="form-label">Fecha fin</label>
                 <input style="color:black" type="text" formControlName="fecha_fin" class="form-control"
                     id="exampleInputFechaFin" [ngClass]="{'is-invalid': Fecha_Fin?.errors && Fecha_Fin?.touched}"
-                    placeholder="Ingrese la fecha fin" required>
+                    placeholder="Por Ej. 05/May/2023" required>
                 <div *ngIf="Fecha_Fin?.errors && Fecha_Fin?.touched">
                     <p *ngIf="Fecha_Fin?.hasError('required')" class="text-danger">
                         No puede dejar la fecha fin en blanco.
