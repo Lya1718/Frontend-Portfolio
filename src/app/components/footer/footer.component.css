@@ -1,0 +1,15 @@
+* {
+    background-color: #F5B1AA;
+    color: black;
+    text-align: center;
+}
+
+p {
+    padding: 20px;
+    padding-right: 40px;
+}
+
+div {
+    margin-right: -36px;
+    margin-bottom: -30px;
+}

@@ -1,0 +1,36 @@
+<div class="row justify-content-center">
+    <div class="containter col-6 text-center" style="color:white">
+        <div>
+            <h3 class="fw-bold fs-1 texto mt-5">Habilidades</h3>
+            <br>
+            <div>
+                <a *ngIf="login" class="botones" routerLink="/skills-add"><img class="agregar"
+                        src="\assets\sumablanca.jpg" alt="agregar"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row d-flex justify-content-center align-items-center">
+    <div class="col-sm-6 mr-5 ml-5 mb-sm-0" *ngFor="let form of formList">
+        <div>
+            <div>
+                <hr>
+                <p class="fw-bold fs-4" style="color:white;">{{form.habilidad}}</p>
+            </div>
+            <div class="progress position-relative" style="height: 30px;">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                    aria-label="Animated striped example" [ngStyle]="{'width':numberToPercent(form.nivel)}"
+                    aria-valuenow="80" aria-valuemin="0" style="background-color:#F5B1AA" aria-valuemax="100"></div>
+                <div class="hability fw-bold fw-2 position-absolute top-0 start-50">{{form.nivel}}%</div>
+            </div>
+            <div *ngIf="login" class="mt-3">
+                <a class="botones" (click)="editForm(form.id, form.habilidad, form.nivel)"
+                    routerLink="/skills-edit"><img class="editar" src="\assets\lapizblanco.jpg" alt="editar"></a>
+                <button type="button" class="btn" (click)="deleteSkill(form)"
+                    style="background-color: #F5B1AA;">Eliminar</button>
+            </div>
+            <hr>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,95 @@
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+
+  }
+}
+
+html {
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+}
+
+* {
+  font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
+  
+}
+
+hr {
+  color: #F5B1AA;
+}
+
+body {
+  background-repeat: no-repeat;
+  /* background-size: 2000px 3000px; */
+}
+
+a:visited{
+  color:black;
+}
+
+#background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+}
+
+.editar, .agregar {
+  width:40px;
+}
+
+.botones {
+  margin: 5px;;
+}
+
+.texto {
+  font-family: 'Raleway', sans-serif;
+  color: white;
+}
+
+app-edicion {
+  float: right;
+  cursor: pointer;
+}
+
+/* CONTACT */
+
+app-contact {
+  align-items: center;
+  float: right;
+}
+
+
+#gmail,
+#github {
+  width: 50px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+/* BANNER */
+
+#perfil-imagen {
+  position: absolute;
+  justify-content: center;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  width: 25%;
+  border-radius: 100%;
+}
+
+#banner-imagen {
+  max-width: 110%;
+  display: flex;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}

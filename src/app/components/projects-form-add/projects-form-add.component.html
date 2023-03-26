@@ -1,0 +1,73 @@
+<div class="col-12 text-center d-flex justify-content-center">
+    <form [formGroup]="myForm" (ngSubmit)="saveProject()">
+        <div class="m-5">
+            <h1 class="texto app-title text-center">Agregar proyectos</h1>
+            <hr>
+            <!-- TÍTULO -->
+            <div class="mb-3">
+                <label for="exampleInputTitulo" class="form-label">Título</label>
+                <input style="color:black" type="text" formControlName="titulo" class="form-control"
+                    id="exampleInputTitulo"
+                    [ngClass]="{'is-invalid': Titulo?.errors && Titulo?.touched, 'is-valid': !Titulo?.errors && !Titulo?.touched}"
+                    placeholder="Ingrese el título de su proyecto">
+                <div *ngIf="Titulo?.errors && Titulo?.touched">
+                    <p *ngIf="Titulo?.hasError('required')" class="text-danger">
+                        No puede dejar el título en blanco.
+                    </p>
+                </div>
+            </div>
+            <!-- DESCRIPCIÓN -->
+            <div class="mb-3">
+                <label for="exampleInputDescripcion" class="form-label">Descripción</label>
+                <input style="color:black" type="text" formControlName="descripcion" class="form-control"
+                    id="exampleInputDescripcion"
+                    [ngClass]="{'is-invalid': Descripcion?.errors && Descripcion?.touched, 'is-valid': !Descripcion?.errors && !Descripcion?.touched}"
+                    placeholder="Ingrese una breve descripción">
+                <div *ngIf="Descripcion?.errors && Descripcion?.touched">
+                    <p *ngIf="Descripcion?.hasError('required')" class="text-danger">
+                        No puede dejar la descripción en blanco.
+                    </p>
+                </div>
+            </div>
+            <!-- IMAGEN -->
+            <div class="mb-3">
+                <label for="exampleInputImage" class="form-label">URL Imagen</label>
+                <input style="color:black" type="text" formControlName="image" class="form-control"
+                    id="exampleInputImage"
+                    [ngClass]="{'is-invalid': Image?.errors && Image?.touched, 'is-valid': !Image?.errors && !Image?.touched}"
+                    placeholder="Ingrese el URL de la imagen">
+                <div *ngIf="Image?.errors && Image?.touched">
+                    <p *ngIf="Image?.hasError('required')" class="text-danger">
+                        No puede dejar la URL de la imagen en blanco.
+                    </p>
+                </div>
+            </div>
+            <!-- LINK -->
+            <div class="mb-3">
+                <label for="exampleInputLink" class="form-label">URL Página</label>
+                <input style="color:black" type="text" formControlName="link" class="form-control" id="exampleInputLink"
+                    [ngClass]="{'is-invalid': Link?.errors && Link?.touched}">
+                <div *ngIf="Link?.errors && Link?.touched">
+                    <p *ngIf="Link?.hasError('required')" class="text-danger">
+                        No puede dejar la URL de la página en blanco.
+                    </p>
+                </div>
+            </div>
+            <!-- BOTONES -->
+            <div class="-mt-5">
+                <button type="submit" class="btn" style="background-color: #F5B1AA;">Aceptar</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="row">
+    <div class="m-5">
+        <button type="text" class="btn" style="background-color: #F5B1AA;"><a style="background-color:#F5B1AA"
+                routerLink="/">Atrás</a></button>
+    </div>
+</div>
+<div class="col-12">
+    <br>
+    <br>
+    <br>
+</div>

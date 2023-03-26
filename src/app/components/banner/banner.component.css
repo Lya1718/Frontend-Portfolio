@@ -1,0 +1,95 @@
+/* LOGO */
+
+#logo {
+    width: 150px;
+}
+
+/* FLECHA */
+
+#flecha {
+    width: 100px;
+}
+
+/* PORTADA */
+
+#galaxy {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+/* BIENVENIDA */
+
+#welcome {
+    font-family: 'Seymour One', sans-serif;
+}
+
+#bienvenida {
+    background-color: transparent;
+    color: white;
+    position: absolute;
+    font-size: 5vw;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width:250px){
+    #bienvenida {
+        display: none;
+    }
+}
+
+@media (max-width:650px){
+    #bienvenida {
+        font-size: 4.7;
+        top: 50%;
+        left: 50%;
+    }
+}
+
+@media (min-width:651px){
+    #bienvenida {
+        font-size: 5.3vw;
+        top: 40%;
+        left: 50%;
+    }
+}
+
+.text-3d {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), -6px -4px 2px rgba(0, 0, 0, 0.5);
+}
+
+.letter {
+    display: inline;
+    position: relative;
+    cursor: default;
+}
+
+/* BOTÓN */
+
+#buton {
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.buton {
+    animation: move 1s linear infinite;
+}
+  
+  @keyframes move {
+    from {
+      transform: translate(0, 0);
+    }
+  
+    to {
+      transform: translate(0, 30px);
+    }
+  }
+
+@media (max-width: 600px){
+    .buton {
+        display: none;
+    }
+}

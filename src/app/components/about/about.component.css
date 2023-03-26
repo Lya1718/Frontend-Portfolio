@@ -1,0 +1,12 @@
+.blanco {
+  color: #0D1110;
+  font-size: 10vw;
+}
+
+.nombre{
+  font-size: 3rem;
+}
+
+.noPadding {
+  padding: 0px;
+}

@@ -1,0 +1,82 @@
+<div class="col-12 text-center d-flex justify-content-center">
+    <form [formGroup]="myForm" (ngSubmit)="editExperiencia()">
+        <div class="m-5">
+            <h1 class="texto app-title">Editar Experiencia Laboral</h1>
+            <hr>
+            <!-- EMPRESA -->
+            <div class="mb-3">
+                <label for="exampleInputEmpresa" class="form-label">Empresa</label>
+                <input style="color:black" type="text" formControlName="empresa" class="form-control"
+                    id="exampleInputEmpresa" [ngClass]="{'is-invalid': Empresa?.errors && Empresa?.touched}"
+                    placeholder="{{empresa}}" required>
+                <div *ngIf="Empresa?.errors && Empresa?.touched">
+                    <p *ngIf="Empresa?.hasError('required')" class="text-danger">
+                        No puede dejar la empresa en blanco.
+                    </p>
+                </div>
+            </div>
+            <!-- CARGO -->
+            <div class="mb-3">
+                <label for="exampleInputCargo" class="form-label">Cargo</label>
+                <input style="color:black" type="text" formControlName="cargo" class="form-control"
+                    id="exampleInputCargo" [ngClass]="{'is-invalid': Cargo?.errors && Cargo?.touched}"
+                    placeholder="{{cargo}}" required>
+                <div *ngIf="Cargo?.errors && Cargo?.touched">
+                    <p *ngIf="Cargo?.hasError('required')" class="text-danger">
+                        No puede dejar el cargo en blanco.
+                    </p>
+                </div>
+            </div>
+            <!-- FECHA_INICIO -->
+            <div class="mb-3">
+                <label for="exampleInputFechaInicio" class="form-label">Fecha de inicio</label>
+                <input style="color:black" type="text" formControlName="fecha_inicio" class="form-control"
+                    id="exampleInputFechaInicio" [ngClass]="{'is-invalid': Fecha_Inicio?.errors && Fecha_Inicio?.touched}"
+                    placeholder="{{fecha_inicio}}" required>
+                <div *ngIf="Fecha_Inicio?.errors && Fecha_Inicio?.touched">
+                    <p *ngIf="Fecha_Inicio?.hasError('required')" class="text-danger">
+                        No puede dejar la fecha de inicio en blanco.
+                    </p>
+                </div>
+            </div>
+            <!-- FECHA_FIN -->
+            <div class="mb-3">
+                <label for="exampleInputFechaFin" class="form-label">Fecha fin</label>
+                <input style="color:black" type="text" formControlName="fecha_fin" class="form-control"
+                    id="exampleInputFechaFin" [ngClass]="{'is-invalid': Fecha_Fin?.errors && Fecha_Fin?.touched}"
+                    placeholder="{{fecha_fin}}" required>
+                <div *ngIf="Fecha_Fin?.errors && Fecha_Fin?.touched">
+                    <p *ngIf="Fecha_Fin?.hasError('required')" class="text-danger">
+                        No puede dejar la fecha fin en blanco.
+                    </p>
+                </div>
+            </div>
+            <!-- DESCRIPCIÓN -->
+            <div class="mb-3">
+                <label for="exampleInputDescripcion" class="form-label">Descripción</label>
+                <input style="color:black" type="text" formControlName="descripcion" class="form-control"
+                    id="exampleInputDescripcion" [ngClass]="{'is-invalid': Descripcion?.errors && Descripcion?.touched}" 
+                    placeholder="{{descripcion}}" required>
+                <div *ngIf="Descripcion?.errors && Descripcion?.touched">
+                    <p *ngIf="Descripcion?.hasError('required')" class="text-danger">
+                        No puede dejar la descripción en blanco.
+                    </p>
+                </div>
+            </div>
+            <!-- BOTONES -->
+            <div class="-mt-5">
+                <button type="submit" class="btn" style="background-color: #F5B1AA;">Aceptar</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="row">
+    <div class="m-5">
+        <button type="text" class="btn" style="background-color: #F5B1AA;"><a style="background-color:#F5B1AA"
+                routerLink="/">Atrás</a></button>
+    </div>
+</div>
+<div class="col-12">
+    <br>
+    <br>
+</div>

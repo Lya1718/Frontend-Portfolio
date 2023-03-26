@@ -1,0 +1,23 @@
+<!-- PERFIL -->
+<div class="row justify-content-center" *ngFor="let form of formList">
+    <div id="descripcion" class="col-12">
+        <img id="perfil-imagen" [src]="form.url_perfil" class="img-fluid" [alt]="form.nombre">
+    </div>
+    <div class="position-relative row text-center blanco">
+        <div class="d-flex noPadding justify-content-center">
+            <br>
+        </div>
+    </div>
+    <!-- ABOUT -->
+    <div class="row justify-content-center">
+        <div class="col-6 text-center">
+            <h3 style="color: white;" class="texto fw-3 fw-bold nombre">Soy {{form.nombre}}</h3>
+            <p style="color: white;" class="textoInfo d-flex justify-content-center">{{form.sobre_mi}}</p>
+            <a *ngIf="login" class="botones" (click)="editForm(form.id, form.nombre, form.apellido, form.sobre_mi, 
+        form.url_perfil, form.url_portada, form.url_correo, form.url_github)" routerLink="/about-edit"><img
+                    class="editar" src="\assets\lapizblanco.jpg" alt="editar"></a>
+            <br>
+            <hr>
+        </div>
+    </div>
+</div>

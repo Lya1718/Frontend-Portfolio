@@ -1,0 +1,43 @@
+<div class="col-12 text-center d-flex justify-content-center"> 
+    <form [formGroup]="myForm" (ngSubmit)="editSkill()">
+        <div class="m-5">
+            <h1 class="texto app-title text-center">Editar habilidades</h1>
+            <hr>
+            <!-- HABILIDAD -->
+            <div class="mb-3">
+                <label for="exampleInputHabilidad" class="form-label">Habilidad</label>
+                <input style="color:black" type="text" formControlName="habilidad" class="form-control" id="exampleInputHabilidad"
+                [ngClass]="{'is-invalid': Habilidad?.errors && Habilidad?.touched}">
+                    <div *ngIf="Habilidad?.errors && Habilidad?.touched">
+                    <p *ngIf="Habilidad?.hasError('required')" class="text-danger">
+                        No puede dejar la habilidad en blanco.
+                    </p>
+                </div>
+            </div>
+            <!-- NIVEL -->
+            <div class="mb-3">
+                <label for="exampleInputNivel" class="form-label">Nivel (1 al 100)</label>
+                <input style="color:black" type="number" formControlName="nivel" class="form-control" id="exampleInputNivel"
+                [ngClass]="{'is-invalid': Nivel?.errors && Nivel?.touched}">
+                    <div *ngIf="Nivel?.errors && Nivel?.touched">
+                        <p *ngIf="Nivel?.hasError('required')" class="text-danger">
+                            No puede dejar el nivel en blanco.
+                        </p>
+                    </div>
+            </div>
+            <!-- BOTONES -->
+            <div class="-mt-5">
+                <button type="submit" class="btn" style="background-color: #F5B1AA;">Aceptar</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="row">
+    <div class="m-5">
+        <button type="text" class="btn" style="background-color: #F5B1AA;"><a style="background-color:#F5B1AA"
+                routerLink="/">Atrás</a></button>
+    </div>
+</div>
+<div class="col-12">
+    <br>
+</div>

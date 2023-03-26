@@ -1,0 +1,36 @@
+<div class="row justify-content-center">
+  <div class="col-6 text-center">
+    <h3 class="texto mt-5 fs-1 fw-bold d-flex justify-content-center">Proyectos</h3>
+    <br>
+    <a *ngIf="login" class="botones" routerLink="/projects-add"><img class="agregar" src="\assets\sumablanca.jpg"
+        alt="agregar"></a>
+  </div>
+</div>
+
+<div class="row d-flex justify-content-center">
+  <div class="col-6 text-bg-dark card m-4" *ngFor="let form of formList" style="width: 18rem;">
+      <div class="text-bg-dark h-100">
+      <div class="mt-2">
+        <img [src]="form.image" class="card-img-top" [alt]="form.titulo">
+      </div>
+      <div class="card-body">
+        <p class="card-title">{{form.titulo}}</p>
+        <p class="card-text">{{form.descripcion}}</p>
+        <a [href]="form.link"><p class="card-text">Visitar</p></a>
+        <br>
+        <div *ngIf="login">
+          <a class="botones" (click)="editForm(form.id, form.titulo, form.descripcion, form.image, form.link)"
+            routerLink="/projects-edit"><img class="editar" src="\assets\lapizblanco.jpg" alt="editar"></a>
+          <button type="button" class="btn" (click)="deleteProject(form)"
+            style="background-color: #F5B1AA;">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12" style="padding: 0px;">
+    <br>
+  </div>
+</div>

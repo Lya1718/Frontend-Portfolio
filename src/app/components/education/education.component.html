@@ -1,0 +1,30 @@
+<div class="row justify-content-center">
+    <div class="col-6 text-center">
+        <div style="color:white">
+                <h2 class="texto fs-1 fw-bold mt-5">Educación</h2>
+                <br>
+                <a *ngIf="login" class="botones" routerLink="/education-add"><img class="agregar"
+                        src="\assets\sumablanca.jpg" alt="agregar"></a>
+        </div>
+        <hr>
+        <div>
+            <div *ngFor="let form of formList">
+                <div class="m-5 d-flex justify-content-center align-items-center" style="color:white">
+                    <ul class="fs-3">
+                        <p class="fw-bold">{{form.titulo}}</p>
+                        <li>{{form.institucion}} {{form.descripcion}}</li>
+                    </ul>
+                </div>
+                <div *ngIf="login" class="mt-5" style="color:white">
+                    <a *ngIf="login" class="botones"
+                        (click)="editForm(form.id, form.institucion, form.titulo, form.descripcion)"
+                        routerLink="/education-edit"><img class="editar" src="\assets\lapizblanco.jpg"
+                            alt="editar"></a>
+                    <button type="button" class="btn" (click)="deleteEducacion(form)"
+                        style="background-color: #F5B1AA;">Eliminar</button>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>

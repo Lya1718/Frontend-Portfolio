@@ -1,0 +1,98 @@
+<div class="text-center d-flex justify-content-center">
+    <form [formGroup]="myForm" (ngSubmit)="editPersona()">
+        <div class="m-5">
+            <h1 class="texto app-title">Editar información personal</h1>
+            <hr>
+            <!-- NOMBRE -->
+            <div class="mb-3">
+                <label for="exampleInputNombre" class="form-label">Nombre</label>
+                <input style="color:black" type="text" formControlName="nombre" class="form-control" id="exampleInputNombre"
+                    [ngClass]="{'is-invalid': Nombre?.errors && Nombre?.touched}">
+                <div *ngIf="Nombre?.errors && Nombre?.touched">
+                    <p *ngIf="Nombre?.hasError('required')" class="text-danger">
+                        No puede dejar el nombre en blanco.
+                    </p>
+                </div>
+            </div>
+            <!-- APELLIDO -->
+            <div class="mb-3">
+                <label for="exampleInputApellido" class="form-label">Apellido</label>
+                <input style="color:black" type="text" formControlName="apellido" class="form-control" id="exampleInputApellido"
+                    [ngClass]="{'is-invalid': Apellido?.errors && Apellido?.touched}">
+                <div *ngIf="Apellido?.errors && Apellido?.touched">
+                    <p *ngIf="Apellido?.hasError('required')" class="text-danger">
+                        No puede dejar el apellido en blanco.
+                    </p>
+                </div>
+            </div>
+            <!-- SOBRE MÍ -->
+            <div class="mb-3">
+                <label for="exampleInputSobreMi" class="form-label">Acerca de mí</label>
+                <input style="color:black" type="text" formControlName="sobre_mi" class="form-control" id="exampleInputSobreMi"
+                    [ngClass]="{'is-invalid': SobreMi?.errors && SobreMi?.touched}">
+                <div *ngIf="SobreMi?.errors && SobreMi?.touched">
+                    <p *ngIf="SobreMi?.hasError('required')" class="text-danger">
+                        No puede dejar la descripción en blanco.
+                    </p>
+                </div>
+            </div>
+            <!-- PERFIL -->
+            <div class="mb-3">
+                <label for="exampleInputPerfil" class="form-label">URL Perfil</label>
+                <input style="color:black" type="text" formControlName="url_perfil" class="form-control" id="exampleInputPerfil"
+                    [ngClass]="{'is-invalid': UrlPerfil?.errors && UrlPerfil?.touched}">
+                <div *ngIf="UrlPerfil?.errors && UrlPerfil?.touched">
+                    <p *ngIf="UrlPerfil?.hasError('required')" class="text-danger">
+                        No puede dejar la URL en blanco.
+                    </p>
+                </div>
+            </div>
+            <!-- PORTADA -->
+            <div class="mb-3">
+                <label for="exampleInputPortada" class="form-label">URL Portada (min 1920x1200)</label>
+                <input style="color:black" type="text" formControlName="url_portada" class="form-control" id="exampleInputPortada"
+                    [ngClass]="{'is-invalid': UrlPortada?.errors && UrlPortada?.touched}">
+                <div *ngIf="UrlPortada?.errors && UrlPortada?.touched">
+                    <p *ngIf="UrlPortada?.hasError('required')" class="text-danger">
+                        No puede dejar la URL en blanco.
+                    </p>
+                </div>
+            </div>
+            <!-- EMAIL -->
+            <div class="mb-3">
+                <label for="exampleInputEmail" class="form-label">Email</label>
+                <input style="color:black" type="email" formControlName="url_correo" class="form-control" id="exampleInputEmail"
+                    [ngClass]="{'is-invalid': UrlCorreo?.errors && UrlCorreo?.touched}">
+                <div *ngIf="UrlCorreo?.errors && UrlCorreo?.touched">
+                    <p *ngIf="UrlCorreo?.hasError('required')" class="text-danger">
+                        No puede dejar el email en blanco.
+                    </p>
+                    <p *ngIf="UrlCorreo?.hasError('email')" class="text-danger">
+                        El formato del email debe ser válido.
+                    </p>
+                </div>
+            </div>
+            <!-- GITHUB -->
+            <div class="mb-3">
+                <label for="exampleInputGithub" class="form-label">Github</label>
+                <input style="color:black" type="text" formControlName="url_github" class="form-control" id="exampleInputGithub"
+                    [ngClass]="{'is-invalid': UrlGithub?.errors && UrlGithub?.touched}">
+                <div *ngIf="UrlGithub?.errors && UrlGithub?.touched">
+                    <p *ngIf="UrlGithub?.hasError('required')" class="text-danger">
+                        No puede dejar la cuenta Github en blanco.
+                    </p>
+                </div>
+            </div>
+            <!-- BOTONES -->
+            <div class="mt-5">
+                <button type="submit" class="btn" style="background-color: #F5B1AA;">Guardar</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="row">
+    <div class="m-5">
+        <button type="text" class="btn" style="background-color: #F5B1AA;"><a style="background-color:#F5B1AA"
+                routerLink="/">Atrás</a></button>
+    </div>
+</div>

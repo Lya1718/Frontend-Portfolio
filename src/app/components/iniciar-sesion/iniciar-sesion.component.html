@@ -1,0 +1,43 @@
+<div id="background">
+</div>
+<div class="col-12 texto text-center d-flex justify-content-center">
+    <form class="form" [formGroup]="loginForm" (ngSubmit)="login()">
+        <div class="m-5">
+            <h1 class="app-title text-center">Iniciar Sesión</h1>
+            <hr>
+        </div>
+        <!-- EMAIL -->
+        <div class="mb-3">
+            <label for="exampleInputEmail" class="form-label">Email</label>
+            <input type="email" formControlName="email" class="form-control" id="exampleInputEmail"
+                [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 'is-valid': !Email?.errors && !Email?.touched}"
+                placeholder="Ingrese su email" value="email" required>
+            <div *ngIf="Email?.errors && Email?.touched">
+                <p *ngIf="Email?.hasError('required')" class="text-danger">
+                    El email es requerido.
+                </p>
+                <p *ngIf="Email?.hasError('email')" class="text-danger">
+                    El formato del email debe ser válido.
+                </p>
+            </div>
+        </div>
+        <!-- PASSWORD -->
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+            <input type="password" formControlName="password" class="form-control"
+                [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 'is-valid': !Password?.errors && !Password?.touched}"
+                placeholder="Ingrese su contraseña" id="exampleInputPassword1">
+            <div *ngIf="Password?.errors && Password?.touched">
+                <p *ngIf="Password?.hasError('required')" class="text-danger">
+                    La contraseña es requerida.
+                </p>
+                <p *ngIf="Password?.errors?.['minlength']" class="text-danger">
+                    La contraseña debe ser de 8 o más caracteres.
+                </p>
+            </div>
+            <div class="mt-5">
+                <button type="submit" class="btn" style="background-color: #F5B1AA;">Aceptar</button>
+            </div>
+        </div>
+    </form>
+</div>
